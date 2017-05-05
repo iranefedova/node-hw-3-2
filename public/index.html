@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Записная книжка</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="main.js"></script>
+</head>
+<body>
+  <div class="popup-bgr hidden">
+    <div class="popup-body">
+    </div>
+  </div>
+  <div class="content">
+    <h1 class="text-center">Записная книжка</h1>
+    <div id="results"></div>
+    <div class="search-block text-center list-item">
+      <p>Поиск:</p>
+      <form id="search_form" action="javascript:void(null);" method="post">
+        <select class="" name="search">
+          <option value="phone">по номеру телефона</option>
+          <option value="name">по имени</option>
+          <option value="lastname">по фамилии</option>
+        </select>
+        <input type="text" name="for_search" placeholder="Введите...">
+        <button type="button" name="button" onclick="mySearch();">Искать!</button>
+      </form>
+      <p>Что нашлось:</p>
+      <div id="search_results"></div>
+    </div>
+    <p class="text-center">Список всех контактов:</p>
+    <div id="contact-list"></div>
+    <p class="text-center">Добавить контакт</p>
+    <form id="main-form" method="post" action="javascript:void(null);">
+        <input type="text" placeholder="Имя" id="name" name="name" required="true">
+        <input type="text" placeholder="Фамилия" id="lastname" name="lastname" required="true">
+        <input type="text" placeholder="Телефон" id="phone" name="phone" required="true">
+        <div class="bottom-btn list-item">
+          <button id="add_additional" name="button" onclick="show_additional();">Добавить дополнительную информацию</button>
+          <input onclick="add_contact(); return false;" type="button" value="Добавить">
+        </div>
+    </form>
+    <div class="additional hidden">
+      <div class="bottom-btn" style="margin-bottom: 10px;">
+        <input type="button" name="" value="Добавить еще" onclick="add_form();">
+        <input type="button" name="" value="Отмена" onclick="delete_form();">
+      </div>
+    </div>
+  </div>
+</body>
+</html>

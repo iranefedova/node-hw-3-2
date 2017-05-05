@@ -1,0 +1,77 @@
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: #ecf0f1;
+  font-family: sans-serif;
+}
+
+.text-center { text-align: center; }
+
+.content {
+  width: 1024px;
+  margin: 0 auto;
+}
+
+#results {
+  display: none;
+  position: fixed;
+  top: 15px;
+  color: #d35400;
+  background-color: #fff;
+  padding: 10px;
+  z-index: 5;
+}
+
+.list-item {
+  border-bottom: #e3e3e3 1px solid;
+  padding-bottom: 7px;
+}
+
+.flex {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 7px;
+}
+
+button { cursor: pointer; }
+
+input[type="button"] {
+  margin-left: 7px;
+  cursor: pointer;
+}
+
+#contact-list, .additional, #main-form, #search_results {
+  width: 550px;
+  margin: 0 auto;
+}
+
+#main-form input {
+  width: 32%;
+}
+
+.bottom-btn {
+  margin-top: 10px;
+}
+
+.hidden {
+  display: none;
+}
+
+.popup-bgr {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.3);
+  padding-top: 30px;
+}
+
+.popup-body {
+  background-color: #fff;
+  margin: 0 auto;
+  width: 400px;
+  padding: 15px;
+}
